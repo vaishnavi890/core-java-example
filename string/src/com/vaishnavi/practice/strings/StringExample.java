@@ -2,32 +2,32 @@ package com.vaishnavi.practice.strings;
 
 import java.util.stream.Stream;
 
-public class StringDemo1 {
+public class StringExample {
     public static void main(String[] args) {
 
-        String country = "India"; // string literal
-        String indiaString = new String("India"); // string object
+        String city = "pune"; // string literal
+        String puneString = new String("Pune"); // string object
 
-        System.out.println("String literal: " + country);
-        System.out.println("String object: " + indiaString);
+        System.out.println("String literal: " + city);
+        System.out.println("String object: " + puneString);
 
         // immutable string objects trying to change
-        indiaString = new String("india123");
-        System.out.println("String object: " + indiaString);
+        puneString = new String("pune123");
+        System.out.println("String object: " + puneString);
         System.out.println("----------------------------------------");
 
         // mutable objects - for non-multi-threading application
-        StringBuilder greetings = new StringBuilder("hi there");
+        StringBuilder greetings = new StringBuilder("hello");
         System.out.println("Current object: "+ greetings);
-        greetings.append(", good afternoon!");
+        greetings.append(", good evening!");
         System.out.println("Current object: "+ greetings);
         greetings = new StringBuilder("its a sunny day!");
         System.out.println("Current object: "+ greetings);
 
         // mutable objects - for multi-threading application
-        StringBuffer stringBuffer = new StringBuffer("hey");
+        StringBuffer stringBuffer = new StringBuffer("hiii");
         System.out.println("Current string buffer: " + stringBuffer);
-        stringBuffer.append(", how are you?");
+        stringBuffer.append(", where are you?");
         System.out.println("Current string buffer: " + stringBuffer);
         stringBuffer = new StringBuffer("feeling sleep?");
         System.out.println("Current string buffer: " + stringBuffer);
@@ -36,7 +36,7 @@ public class StringDemo1 {
         System.out.println("----------------------------------------");
         System.out.println("----------------------------------------");
 
-        String sentence = "this is my string.";  // sentence contains blank space
+        String sentence = "this is new string.";  // sentence contains blank space
         var wordSets = " word1 word2 word3 "; // set of words contains blank spaces
         var blanks = "      ";
 
@@ -53,8 +53,8 @@ public class StringDemo1 {
         System.out.println("----------------------------------------");
 
         //repeat - repeats current string
-        String blah = new String("Blah ");
-        String repeatedString = blah.repeat(3);
+        String komal = new String("Komal ");
+        String repeatedString = komal.repeat(3);
         System.out.println("blah.repeat(3): " + repeatedString);
         System.out.println("----------------------------------------");
 
@@ -71,7 +71,7 @@ public class StringDemo1 {
         System.out.println("----------------------------------------");
 
         // trim() vs strip()
-        var whitespaceString = "\n\they buddy\u2005";
+        var whitespaceString = "\n\they buddy\u2008";
         System.out.println("whitespaceString: " + whitespaceString);
         System.out.println("whitespaceString.strip(): " + whitespaceString.strip());
 
@@ -89,46 +89,46 @@ public class StringDemo1 {
         System.out.println("----------------------------------------");
 
         // it will check the similarity in object location
-        if (country == indiaString) {
-            System.out.println("country == indiaString: both the string objects are exact same");
+        if (city == puneString) {
+            System.out.println("city == puneString: both the string objects are exact same");
         } else {
-            System.out.println("country == indiaString: both the string objects are NOT exactly same");
+            System.out.println("city == puneString: both the string objects are NOT exactly same");
         }
         System.out.println("----------------------------------------");
 
         // this checks the similarity in value
-        indiaString = new String("India");
-        if (country.equals(indiaString)) {
-            System.out.println("country.equals(indiaString): both the string values are exact same");
+        puneString = new String("Pune");
+        if (city.equals(puneString)) {
+            System.out.println("city.equals(puneString): both the string values are exact same");
         } else {
-            System.out.println("country.equals(indiaString): both the string values are NOT exactly same");
+            System.out.println("city.equals(puneString): both the string values are NOT exactly same");
         }
         System.out.println("----------------------------------------");
 
-        System.out.println("indiaString.length(): " + indiaString.length());
+        System.out.println("puneString.length(): " + puneString.length());
         System.out.println("----------------------------------------");
 
-        System.out.println("indiaString: " + indiaString);
-        String replacedString = indiaString.replace("I", "i");
-        System.out.println("indiaString.replace(): " + replacedString);
-        String secondTimeReplacedString = indiaString.replace("i", "I");
-        System.out.println("indiaString.replace(): " + secondTimeReplacedString);
+        System.out.println("puneString: " + puneString);
+        String replacedString = puneString.replace("P", "p");
+        System.out.println("puneString.replace(): " + replacedString);
+        String secondTimeReplacedString = puneString.replace("p", "P");
+        System.out.println("puneString.replace(): " + secondTimeReplacedString);
         System.out.println("----------------------------------------");
 
-        System.out.println("indiaString.substring(3): " + indiaString.substring(3));
-        System.out.println("indiaString.substring(3, 5): " + indiaString.substring(3, 5));
-        System.out.println("indiaString.substring(1, 4): " + indiaString.substring(1, 4));
+        System.out.println("puneString.substring(3): " + puneString.substring(3));
+        System.out.println("puneString.substring(3, 2): " + puneString.substring(3, 2));
+        System.out.println("puneString.substring(1, 4): " + puneString.substring(1, 4));
         System.out.println("----------------------------------------");
 
-        System.out.println("indiaString.toUpperCase(): " + indiaString.toUpperCase());
-        System.out.println("indiaString.toLowerCase(): " + indiaString.toLowerCase());
+        System.out.println("puneString.toUpperCase(): " + puneString.toUpperCase());
+        System.out.println("puneString.toLowerCase(): " + puneString.toLowerCase());
         System.out.println("----------------------------------------");
 
-        indiaString.concat(" new content ");
-        System.out.println("indiaString.concat(): " + indiaString.concat(" new content "));
+        puneString.concat(" new content ");
+        System.out.println("puneString.concat(): " + puneString.concat(" new content "));
 
-        byte[] indiaBytes = indiaString.getBytes();
-        System.out.println("byte[] of indiastring: " + indiaBytes);
+        byte[] puneBytes = puneString.getBytes();
+        System.out.println("byte[] of punestring: " + puneBytes);
 
     }
 }
