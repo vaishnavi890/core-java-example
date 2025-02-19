@@ -1,0 +1,2 @@
+101,Buddy,Golden Retriever,3 years,Available
+102,Max,Beagle,2 years,Available
