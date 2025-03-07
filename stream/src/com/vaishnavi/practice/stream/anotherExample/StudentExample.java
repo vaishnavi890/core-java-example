@@ -10,7 +10,7 @@ public class StudentExample {
         students.add(new Student(102, "Raj", 20, 76.0));
         students.add(new Student(103, "Riya", 23, 90.2));
         students.add(new Student(104, "Priyanka", 21, 65.8));
-        
+
         // Using Stream API to filter students with marks > 80
         System.out.println("\nStudents with marks above 80:");
         students.stream()
